@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Student Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="welcome-msg">Welcome!</h1>
+        <button onclick="logout()" class="logout-btn">Log Out</button>
+    </header>
+
+    <main>
+        <section id="weekly-summary">
+            <h2>This Week's Performance</h2>
+            <div class="stats-grid">
+                <div class="chart-card">
+                    <canvas id="githubChart"></canvas>
+                    <p class="chart-label">GitHub Score</p>
+                </div>
+                <div class="chart-card">
+                    <canvas id="linkedinChart"></canvas>
+                    <p class="chart-label">LinkedIn Score</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number" id="checkin-count">0</p>
+                    <p class="chart-label">Total Check-ins</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number" id="avg-sleep-num">0h</p>
+                    <p class="chart-label">Avg Sleep</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number" id="avg-study-num">0h</p>
+                    <p class="chart-label">Avg Study</p>
+                </div>
+            </div>
+            <div id="topics-text"></div>
+        </section>
+
+        <nav class="dashboard-links">
+            <a href="github.html" class="nav-card">Check GitHub Score</a>
+            <a href="linkedin.html" class="nav-card">Check LinkedIn Score</a>
+            <a href="chatbot.html" class="nav-card">Chat with Advisor</a>
+        </nav>
+
+        <section id="daily-checkin" style="display:none;">
+            <h2>Today's Check-in</h2>
+            <form id="checkin-form">
+                <label>Mood</label>
+                <select id="mood" required>
+                    <option value="motivated">Motivated</option>
+                    <option value="tired">Tired</option>
+                    <option value="slightly tired">Slightly Tired</option>
+                    <option value="stressed">Stressed</option>
+                    <option value="happy">Happy</option>
+                </select>
+
+                <label>Study Hours</label>
+                <input type="number" id="study_hours" step="0.5" required>
+
+                <label>Sleep Hours</label>
+                <input type="number" id="sleep_hours" step="0.5" required>
+
+                <label>Topics/Languages Focused</label>
+                <input type="text" id="topics_studied" placeholder="e.g. DSA, Python">
+
+                <label>Tasks Completed</label>
+                <input type="text" id="tasks_completed" placeholder="e.g. Finished assignment">
+
+                <button type="submit">Submit Today's Log</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

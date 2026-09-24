@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinkedIn Score - Student Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LinkedIn Digital Presence</h1>
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    </header>
+
+    <main>
+        <section id="linkedin-current">
+            <div id="linkedin-result">Loading...</div>
+        </section>
+
+        <section>
+            <h2>Update Your LinkedIn Info</h2>
+            <form id="linkedin-form">
+                <label>Headline</label>
+                <input type="text" id="headline" placeholder="e.g. BCA Student | Data Science Enthusiast">
+
+                <label><input type="checkbox" id="has_profile_photo"> Has profile photo</label>
+                <label><input type="checkbox" id="has_summary"> Has About/Summary section</label>
+
+                <label>Number of skills listed</label>
+                <input type="number" id="num_skills" value="0">
+
+                <label>Number of connections</label>
+                <input type="number" id="num_connections" value="0">
+
+                <label>Number of experience entries</label>
+                <input type="number" id="num_experiences" value="0">
+
+                <label>Number of endorsements</label>
+                <input type="number" id="num_endorsements" value="0">
+
+                <button type="submit">Save & Calculate Score</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="linkedin.js"></script>
+</body>
+</html>

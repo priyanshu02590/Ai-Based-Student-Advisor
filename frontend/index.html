@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Advisor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Student Advisor Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Digital Presence Section -->
+        <section id="digital-presence">
+            <h2>Digital Presence</h2>
+            <div class="input-row">
+                <input type="text" id="github-username" placeholder="Enter GitHub username">
+                <button onclick="fetchGithubScore()">Check GitHub Score</button>
+            </div>
+            <div id="github-result"></div>
+        </section>
+
+        <!-- Habit Tracker Section -->
+        <section id="habit-tracker">
+            <h2>Weekly Wellness Insight</h2>
+            <button onclick="fetchWeeklyInsight()">Load My Weekly Insight</button>
+            <div id="insight-result"></div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot">
+            <h2>Chat with Your Advisor</h2>
+            <div id="chat-window"></div>
+            <div class="input-row">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
